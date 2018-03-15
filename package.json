@@ -15,11 +15,12 @@
     "lint:js": "eslint ./*.js app config lib server tests",
     "start": "ember serve",
     "test": "ember test",
-    "heroku-postbuild": "ember build"
+    "heroku-postbuild": "ember build --environment=production"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
+    "ember-browserify": "^1.2.1",
     "ember-cli": "~3.0.0",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.6.0",
@@ -44,5 +45,8 @@
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "dependencies": {
+    "@mars/heroku-js-runtime-env": "^3.0.2"
   }
 }
